@@ -1,0 +1,24 @@
+<div align="center">
+<body>
+<h1 align="center"> StackActivity Forum </h1>
+
+<h3>Numéro Thread</h3>
+{{ ThreadOne.id }}
+<br>
+
+<h3>Sujet</h3>
+{{ ThreadOne.Sujet }}
+<br>
+
+<h3>Description</h3>
+{{ ThreadOne.Description }}
+<br>
+
+<img src="/Images1/{{ ThreadOne.Image }}" width="300" height="290" alt="" class="img img-responsive img-preview thumbnail">
+<br>
+<br>
+
+<button><a href="{{ path('affichThread')}}">Afficher Liste des Threads</a></button>
+<br>
+</body>
+</div>

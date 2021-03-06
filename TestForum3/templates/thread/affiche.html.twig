@@ -1,0 +1,17 @@
+<body>
+<h1 align="center"> StackActivity Forum </h1>
+<table border="1" align="center" width="100%">
+    <tr>
+
+        <th align="center"> Numéro </th>
+        <th align="center"> Sujet </th>
+    </tr>
+    <tr{% for r in Thread %}>
+      <a href="onClick"><td align="center"> {{ r.id }}</td></a>
+          <td align="center"> {{ r.Sujet }}</td>
+        <td align="center"><button><a href="{{ path('onClick', {'id': r.id}) }}">Afficher</a></button></td>
+    </tr {% endfor %}>
+</table>
+<br>
+<div align="center"><button><a href="{{ path('add_thread') }}">Ajouter un nouveau Thread</a></button></div>
+</body>

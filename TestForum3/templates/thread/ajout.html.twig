@@ -1,0 +1,21 @@
+<div align="center">{{ form_start(form) }}
+    {% for message in app.flashes('success') %}
+        <h3 class="alert alert-success" align="left"> {{ message }} </h3>
+    {% endfor %}
+{{ form_errors(form.Sujet) }}
+{{ form_label(form.Sujet) }}
+{{ form_widget(form.Sujet) }}
+<br>
+{{ form_errors(form.Description) }}
+{{ form_label(form.Description) }}
+{{ form_widget(form.Description) }}
+<br>
+{{ form_errors(form.Image) }}
+{{ form_label(form.Image) }}
+{{ form_widget(form.Image) }}
+
+
+{{ form_end(form) }}
+    <br>
+    <button><a href="{{ path('affichThread') }}">Afficher les Threads</a></button>
+</div>
